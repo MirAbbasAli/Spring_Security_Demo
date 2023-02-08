@@ -1,0 +1,12 @@
+create database springsecurity;
+use springsecurity;
+
+create table user(
+id int primary key,
+active tinyint default 1,
+password varchar(40),
+roles varchar(255),
+user_name varchar(30));
+
+insert into user(id, password, roles, user_name) values(1, "1234", "ROLE_USER", "Abbas");
+insert into user(id, password, roles, user_name) values(2, "pass", "ROLE_ADMIN", "Mir");
